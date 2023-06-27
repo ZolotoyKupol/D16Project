@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Your Ads</h2>
+<ul>
+  {% for ad in ads %}
+    <li>{{ ad.title }}</li>
+  {% empty %}
+    <li>No ads found.</li>
+  {% endfor %}
+</ul>
+
+<h2>Your Responses</h2>
+<ul>
+  {% for response in responses %}
+    <li>{{ response.text }}</li>
+  {% empty %}
+    <li>No responses found.</li>
+  {% endfor %}
+</ul>
+{% endblock %}
